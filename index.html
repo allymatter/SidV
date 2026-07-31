@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sid Varma — I build the systems that run companies.</title>
+<meta name="description" content="Sid Varma. Co-founder of Syrencloud, now building AllyMatter. I build the systems that run companies. And I grow coffee in Sakleshpur.">
+<link rel="canonical" href="https://sidv.co/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sidv.co/">
+<meta property="og:title" content="Sid Varma — I build the systems that run companies.">
+<meta property="og:description" content="Co-founder of Syrencloud, now building AllyMatter. I build the systems that run companies. And I grow coffee in Sakleshpur.">
+<meta property="og:image" content="https://sidv.co/portrait.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sidharthvarma">
+<meta name="twitter:title" content="Sid Varma — I build the systems that run companies.">
+<meta name="twitter:description" content="Co-founder of Syrencloud, now building AllyMatter. I build the systems that run companies. And I grow coffee in Sakleshpur.">
+<meta name="twitter:image" content="https://sidv.co/portrait.jpg">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23c2410c'/><text x='50' y='72' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23fff'>S</text></svg>">
+
+<style>
+  :root {
+    --bg:          #fbfaf8;
+    --bg-tint:     #f1ece4;
+    --ink:         #16181d;
+    --body:        #3f444e;
+    --muted:       #6c7280;
+    --rule:        #e2ddd5;
+    --accent:      #b8420f;
+    --accent-soft: rgba(184, 66, 15, 0.09);
+    --dot:         rgba(22, 24, 29, 0.10);
+    --card:        rgba(255, 255, 255, 0.55);
+    --shadow:      0 1px 2px rgba(22, 24, 29, 0.05),
+                   0 12px 32px -12px rgba(22, 24, 29, 0.22);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:          #0e0f12;
+      --bg-tint:     #171922;
+      --ink:         #f4f2ee;
+      --body:        #b6bac3;
+      --muted:       #858b97;
+      --rule:        #262931;
+      --accent:      #f08a4b;
+      --accent-soft: rgba(240, 138, 75, 0.13);
+      --dot:         rgba(255, 255, 255, 0.075);
+      --card:        rgba(255, 255, 255, 0.04);
+      --shadow:      0 1px 2px rgba(0, 0, 0, 0.4),
+                     0 14px 34px -12px rgba(0, 0, 0, 0.65);
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 6vw, 3rem);
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(var(--dot) 1px, transparent 1.4px),
+      radial-gradient(120% 90% at 8% -5%, var(--bg-tint) 0%, transparent 58%),
+      radial-gradient(90% 70% at 102% 105%, var(--accent-soft) 0%, transparent 55%);
+    background-size: 22px 22px, 100% 100%, 100% 100%;
+    background-position: -1px -1px, 0 0, 0 0;
+    color: var(--body);
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  main {
+    width: 100%;
+    max-width: 54rem;
+  }
+
+  /* ---------- layout ---------- */
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.4rem, 3vw, 2rem);
+  }
+
+  @media (min-width: 46em) {
+    .top {
+      flex-direction: row-reverse;
+      align-items: flex-start;
+      gap: clamp(2rem, 4vw, 3.25rem);
+    }
+    .intro { flex: 1 1 auto; min-width: 0; }
+  }
+
+  /* ---------- portrait ---------- */
+
+  .portrait {
+    flex: 0 0 auto;
+    width: 108px;
+    margin: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+  }
+
+  .portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: 50% 22%;
+  }
+
+  @media (min-width: 46em) {
+    .portrait {
+      width: clamp(140px, 17vw, 186px);
+      border-radius: 16px;
+    }
+  }
+
+  /* ---------- type ---------- */
+
+  .name {
+    margin: 0 0 clamp(0.85rem, 2vw, 1.15rem);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+                 ui-serif, serif;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3.6vw, 1.9rem);
+    line-height: 1.15;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .name::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  h1 {
+    margin: 0 0 clamp(1rem, 2.5vw, 1.35rem);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+                 ui-serif, serif;
+    font-weight: 600;
+    font-size: clamp(2.05rem, 6vw, 3.5rem);
+    line-height: 1.07;
+    letter-spacing: -0.021em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  .subhead {
+    margin: 0 0 clamp(1.5rem, 3.5vw, 2rem);
+    font-size: clamp(1.08rem, 2.4vw, 1.27rem);
+    line-height: 1.5;
+    color: var(--ink);
+    max-width: 42ch;
+    text-wrap: pretty;
+  }
+
+  .body p {
+    margin: 0 0 1.05rem;
+    max-width: 62ch;
+    text-wrap: pretty;
+  }
+
+  .body p:last-child { margin-bottom: 0; }
+
+  .body strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .inline-link {
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .inline-link::after {
+    content: "↗";
+    margin-left: 0.22em;
+    font-size: 0.74em;
+    font-weight: 400;
+    color: var(--muted);
+    transition: color 0.15s ease;
+  }
+
+  .inline-link:hover,
+  .inline-link:focus-visible {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .inline-link:hover::after,
+  .inline-link:focus-visible::after { color: var(--accent); }
+
+  .inline-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ---------- links ---------- */
+
+  .links {
+    margin-top: clamp(2rem, 4.5vw, 2.75rem);
+    padding-top: clamp(1.4rem, 3.5vw, 1.9rem);
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.4rem 1.3rem;
+  }
+
+  .row-label {
+    flex: 0 0 auto;
+    min-width: 6.5rem;
+    font-size: 0.71rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .row-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 1.3rem;
+  }
+
+  .row-items a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.96rem;
+    font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--rule);
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .row-items a[target="_blank"]::after {
+    content: "↗";
+    margin-left: 0.3em;
+    font-size: 0.78em;
+    color: var(--muted);
+    transition: color 0.15s ease;
+  }
+
+  .row-items a:hover,
+  .row-items a:focus-visible {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .row-items a:hover::after,
+  .row-items a:focus-visible::after { color: var(--accent); }
+
+  .row-items a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  .row-items .email {
+    font-size: 0.96rem;
+    font-weight: 500;
+    color: var(--ink);
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <div class="top">
+    <figure class="portrait">
+      <img src="portrait.jpg" width="540" height="720"
+           alt="Illustrated portrait of Sid Varma in a beanie and sunglasses, palm trees behind him.">
+    </figure>
+
+    <div class="intro">
+      <p class="name">Sid Varma</p>
+
+      <h1>I build the systems that run companies.</h1>
+
+      <p class="subhead">
+        Most companies run on memory, habit, and whoever happens to be in the room.
+        I'd rather write it down, make it repeatable, and let the system carry the load.
+      </p>
+
+      <div class="body">
+        <p>
+          I co-founded Syrencloud, where I learned that the hard part is
+          rarely the product. It's everything around it: how work gets decided, documented,
+          handed off, and held to. Today I'm building <a class="inline-link"
+          href="https://allymatter.com" target="_blank" rel="noopener noreferrer">AllyMatter</a>, so teams
+          can write down how they work, get people to acknowledge it, and prove it when
+          someone asks. It's the tool I kept wanting every time a policy sat in someone's
+          inbox and nobody could tell me who had actually read it.
+        </p>
+        <p>
+          When I'm not building software, I'm growing coffee in Sakleshpur. Turns out a
+          farm is also a system, just one that ignores your deadlines.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <nav class="links" aria-label="Links and contact">
+    <div class="row">
+      <span class="row-label" id="label-me">Me</span>
+      <div class="row-items" role="list" aria-labelledby="label-me">
+        <a role="listitem" href="https://x.com/sidharthvarma" target="_blank" rel="noopener noreferrer">X</a>
+        <a role="listitem" href="https://www.linkedin.com/in/sidharthvarma" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a role="listitem" href="https://www.threads.net/@sidharthvarmag" target="_blank" rel="noopener noreferrer">Threads</a>
+        <a role="listitem" href="https://bsky.app/profile/sidv.co" target="_blank" rel="noopener noreferrer">Bluesky</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="row-label" id="label-am">AllyMatter</span>
+      <div class="row-items" role="list" aria-labelledby="label-am">
+        <a role="listitem" href="https://allymatter.com" target="_blank" rel="noopener noreferrer">Site</a>
+        <a role="listitem" href="https://x.com/tryallymatter" target="_blank" rel="noopener noreferrer">X</a>
+        <a role="listitem" href="https://www.linkedin.com/company/allymatter" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a role="listitem" href="https://bsky.app/profile/allymatter.com" target="_blank" rel="noopener noreferrer">Bluesky</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="row-label" id="label-email">Email</span>
+      <div class="row-items" role="list" aria-labelledby="label-email">
+        <span class="email" role="listitem">sid [] sidv [] co</span>
+        <a class="email" role="listitem" href="mailto:sid@allymatter.com">sid@allymatter.com</a>
+      </div>
+    </div>
+  </nav>
+</main>
+
+</body>
+</html>
