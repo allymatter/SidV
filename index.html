@@ -213,7 +213,10 @@
   }
 
   .inline-link:hover::after,
-  .inline-link:focus-visible::after { color: var(--accent); }
+  .inline-link:focus-visible::after {
+    color: var(--accent);
+    animation: arrow-bounce 0.5s ease-in-out;
+  }
 
   .inline-link:focus-visible {
     outline: 2px solid var(--accent);
@@ -281,7 +284,10 @@
   }
 
   .row-items a:hover::after,
-  .row-items a:focus-visible::after { color: var(--accent); }
+  .row-items a:focus-visible::after {
+    color: var(--accent);
+    animation: arrow-bounce 0.5s ease-in-out;
+  }
 
   .row-items a:focus-visible {
     outline: 2px solid var(--accent);
@@ -297,8 +303,16 @@
     border-bottom: 1px solid var(--rule);
   }
 
+  @keyframes arrow-bounce {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(-2px); }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
+    @keyframes arrow-bounce { 0%, 100% { transform: translateX(0); } }
   }
 </style>
 </head>
