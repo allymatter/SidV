@@ -199,6 +199,7 @@
 
   .inline-link::after {
     content: "↗";
+    display: inline-block; /* transform is ignored on inline boxes */
     margin-left: 0.22em;
     font-size: 0.74em;
     font-weight: 400;
@@ -271,6 +272,7 @@
 
   .row-items a[target="_blank"]::after {
     content: "↗";
+    display: inline-block; /* transform is ignored on inline boxes */
     margin-left: 0.3em;
     font-size: 0.78em;
     color: var(--muted);
@@ -311,8 +313,10 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    * { transition: none !important; }
-    @keyframes arrow-bounce { 0%, 100% { transform: translateX(0); } }
+    *, *::before, *::after {
+      transition: none !important;
+      animation: none !important;
+    }
   }
 </style>
 </head>
